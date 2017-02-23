@@ -1,6 +1,8 @@
 var slackTerminal = require('slack-terminalize');
 
-slackTerminal.init('', {
+var key = process.env.SLACKBOT_API_KEY;
+console.log(key);
+slackTerminal.init(key, {
     // slack rtm client options here
     // more info at: https://github.com/slackhq/node-slack-client/blob/master/lib/clients/rtm/client.js
 }, {
